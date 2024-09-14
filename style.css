@@ -10,7 +10,7 @@ html,body{
 
 
 /* =============hero_section========== */
-.hero_section{
+/* .hero_section{
     background: #ff7800;
     height: 100vh;
     width: 100%;
@@ -20,8 +20,8 @@ html,body{
 }
 .hero_section .line1,.hero_section .line2{
     display: -webkit-box;
-    font-size: 60px;
-    line-height: 60px;
+    font-size: 20px;
+    line-height: 20px;
     color: rgba(255, 255, 255, 0.3);
 }
 .hero_section .slides .line1>div,.line2>div{
@@ -34,10 +34,10 @@ html,body{
 }
 @keyframes moveRight {
   0% {
-    transform: translateX(-200%); /* Start at original position */
+    transform: translateX(-200%); 
   }
   100% {
-    transform: translateX(0%); /* Move 300px to the right */
+    transform: translateX(0%); 
   }
 }
 .hero_section .slides>div:nth-child(even){
@@ -46,10 +46,10 @@ html,body{
 }
 @keyframes moveLeft {
     0% {
-      transform: translateX(0); /* Start at original position */
+      transform: translateX(0);
     }
     100% {
-      transform: translateX(-300%); /* Move 300px to the right */
+      transform: translateX(-300%); 
     }
   }
 .round1,.round2,.round3{
@@ -111,17 +111,121 @@ html,body{
     z-index: 0;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -65%) scale(1.2); /* Initial state */
+    transform: translate(-50%, -65%) scale(1.2); 
     border-radius: 50%;
     animation: scaleUp 2s infinite alternate linear;
 }
 @keyframes scaleUp {
     0% {
-        transform: translate(-50%, -65%) scale(1.3); /* Start with scale 1.2 */
+        transform: translate(-50%, -65%) scale(1.3); 
     }
     100% {
-        transform: translate(-50%, -65%) scale(1); /* Scale down to 1 */
+        transform: translate(-50%, -65%) scale(1); 
     }
+} */
+ .hero_section{
+    background: #ff7800;
+    min-height: 100vh;
+ }
+ .hero_section .left_box{
+    position: relative;
+ }
+ .hero_section .statue_img{
+    height: 400px;
+    position: relative;
+    z-index: 2;
+ }
+ .hero_section .circle_1,.circle_2,.circle_3{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 350px;
+    height: 350px;
+    background-color: #f65600;
+    border-radius: 50%;
+ }
+ .circle_2{
+    width: 285px;
+    height: 285px;
+    background-color: rgba(255, 255, 255, 0.5);
+    animation: scaleUp 2s infinite alternate ease-in-out;
+}
+@keyframes scaleUp {
+    0% {
+        transform: translate(-50%,-50%) scale(1.1);
+    }
+    100% {
+        transform: translate(-50%,-50%) scale(1); 
+    }
+}
+.circle_3{
+    width: 250px;
+    height: 250px;
+    background-color: #ff9232;
+}
+
+.hero_section .right_box{
+    display: flex;
+    justify-content: center;
+}
+.hero_section .right_box .content{
+    border-left: 15px solid white;
+    border-right: 15px solid white;
+    padding: 50px 25px;
+    position: relative;
+    color: white;
+}
+.hero_section .right_box .content:before,
+.hero_section .right_box .content:after{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 50%;
+    background-color: white;
+    animation: rise 3s infinite alternate ease-in-out;
+}
+@keyframes rise {
+    0% {
+        width: 60%;
+    }
+    100% {
+        width: 50%; 
+    }
+}
+.hero_section .right_box .content:before{
+    left: 0;
+    top: 0;
+}
+.hero_section .right_box .content:after{
+    right: 0;
+    bottom: 0;
+}
+.hero_section .right_box .content h5{
+    margin-bottom: 20px;
+}
+.hero_section .right_box .content button{
+    background: black;
+    border: 2px solid white;
+    padding: 6px 15px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+}
+.card_box{
+    background: rgba(0, 0, 0, 0.2);
+}
+.hero_section .card{
+    background: none;
+    border: none;
+    border-right: 2px solid #f65600;
+    border-radius: 0;
+    text-align: right;
+    padding: 20px;
+    color: white;
+}
+.hero_section .card p{
+    margin: 0;
 }
 /* =======================About===================== */
 .about_section{    
