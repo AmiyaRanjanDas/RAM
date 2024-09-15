@@ -137,6 +137,47 @@ html,body{
  #carouselExampleSlidesOnly img{
     height: 100%;
  }
+ .whatsapp_icon{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 100;
+ }
+ .whatsapp_icon a{
+    text-decoration: none;
+ }
+ .whatsapp_icon a img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+ }
+ .navbar{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+ }
+ .navbar .logo{
+    gap: 5px;
+ }
+ .navbar .logo img{
+    width: 100px;
+ }
+ .navbar .logo h5{
+    margin: 0;
+    color: white;
+ }
+ .navbar p{
+    margin: 0;
+    color: white;
+ }
+ .navbar p:first-child{
+    margin-right: 15px;
+ }
+ .navbar i{
+    color: #ff7800;
+ }
  .hero_section .left_box{
     position: relative;
  }
@@ -219,7 +260,7 @@ html,body{
     text-shadow: 2px 2px 5px black;
 }
 .hero_section .right_box .content button{
-    background: black;
+    background: #ff7800;
     border: 2px solid white;
     padding: 6px 15px;
     border-radius: 10px;
