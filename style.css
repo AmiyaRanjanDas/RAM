@@ -221,9 +221,9 @@ html,body{
     justify-content: center;
 }
 .hero_section .right_box .content{
-    border-left: 15px solid white;
-    border-right: 15px solid white;
-    padding: 50px 25px;
+    border-left: 8px solid white;
+    border-right: 8px solid white;
+    padding: 40px 25px;
     position: relative;
     color: white;
 }
@@ -231,7 +231,7 @@ html,body{
 .hero_section .right_box .content:after{
     position: absolute;
     content: "";
-    height: 15px;
+    height: 8px;
     width: 50%;
     background-color: white;
     animation: rise 3s infinite alternate ease-in-out;
