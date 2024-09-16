@@ -137,6 +137,12 @@ html,body{
  #carouselExampleSlidesOnly img{
     height: 100%;
  }
+ .slide1{
+    display: block;
+ }
+ .slide2{
+    display: none;
+ }
  .whatsapp_icon{
     position: fixed;
     right: 15px;
@@ -168,12 +174,14 @@ html,body{
     margin: 0;
     color: white;
  }
+ .navbar .paras{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+ }
  .navbar p{
     margin: 0;
     color: white;
- }
- .navbar p:first-child{
-    margin-right: 15px;
  }
  .navbar i{
     color: #ff7800;
@@ -284,14 +292,98 @@ html,body{
 .hero_section .card p{
     margin: 0;
 }
+@media (max-width:768px) {
+    .slide1{
+        display: none;
+     }
+     .slide2{
+        display: block;
+     }
+     .container_z{
+        position: relative;
+        overflow: hidden;
+     }
+     #carouselExampleSlidesOnly{
+        top: 0;
+        left: 0;
+     }
+     .navbar .logo h5{
+        display: none;
+     }
+     .navbar .paras{
+        gap: 0px;
+        display: block;
+     }
+     .hero_section .statue_img{
+        height: 300px;
+     }
+    .hero_section .circle_1,.circle_2,.circle_3{
+        top: 40%;
+        width: 280px;
+        height: 280px;
+     }
+     .circle_2{
+        width: 250px;
+        height: 250px;
+        animation: scaleUp 2s infinite alternate ease-in-out;
+    }
+    @keyframes scaleUp {
+        0% {
+            transform: translate(-50%,-50%) scale(1.05);
+        }
+        100% {
+            transform: translate(-50%,-50%) scale(1); 
+        }
+    }
+    .circle_3{
+        width: 230px;
+        height: 230px;
+    }
+    .hero_section .right_box .content{
+        padding: 25px 15px;
+    }
+    .hero_section .right_box .content h2{
+        font-size: 22px;
+    }
+    .hero_section .right_box .content h5{
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+    .hero_section .right_box .content button{
+        padding: 5px 12px;
+    }    
+    .hero_section .card{
+        padding: 10px;    
+    }
+    .hero_section .card:nth-child(1),.hero_section .card:nth-child(2){       
+        margin-bottom: 12px;
+    }
+    .hero_section .card h3{
+        font-size: 20px;
+    }
+    .hero_section .card p{
+        font-size: 12px;
+    }
+}
 /* =======================About===================== */
 .about_section{    
-    background:rgb(0, 0, 107);
+    background:#FFFDD0;
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
     width: 100%;
+}
+.about_section .background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 115%;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ff770027;
+    font-weight: 500;
 }
 .about_section .flower_1{
     position: absolute;
@@ -347,16 +439,15 @@ html,body{
 }
 .about_section .left_box .img_box{
     position: relative;
-    border-left: 1px solid white;
+    border-left: 1px solid black;
     display: flex;
-        align-items: center;
+    align-items: center;
 }
 .about_section .left_box .img_box p{
         position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: white;
         margin: 0;
         left: -15px;
         line-height: 16px;
@@ -371,7 +462,7 @@ html,body{
     position: absolute;
     height: 1px;
     width: 9px;
-    background: white;
+    background: black;
 }
 .about_section .left_box .img_box:before{
     top: 0;
@@ -386,7 +477,7 @@ html,body{
 }
 .about_section .content{
     text-align: center;
-    color: white;
+    color: black;
 }
 .about_section .content img{
     width: 120px;
@@ -448,4 +539,56 @@ html,body{
     font-weight: 500;
     font-size: 13px;
     margin-top: 15px;
+}
+@media (max-width:768px) {
+    .about_section .flower_1{
+    width: 150px;
+}
+.about_section .flower_2{
+    width: 120px;
+    bottom: 92px;
+}
+.about_section .flower_3{
+        width: 140px;
+        left: 90px;
+}
+.about_section .flower_4{
+    width: 150px;
+}
+.about_section .flower_5{
+    width: 120px;
+    right: -65px;
+    top: 92px;
+}
+.about_section .flower_6{
+    width: 125px;
+    right: 85px;
+}
+.about_section .left_box .img_box img {
+    height: 300px;
+}
+.about_section .content h5 {
+    font-size: 14px;
+}
+.about_section .content h3 {
+    font-size: 15px;
+}
+.about_section .content h4 {
+    font-size: 14px;
+    margin: 20px 0 15px;
+}
+.about_section .content button {
+    border-radius: 50%;
+    padding: 7px 25px;
+    font-weight: 600;
+    border: 3px solid #ff7800;
+    font-size: 18px;
+}
+.about_section .content p {
+    margin-top: 7px;
+}
+}
+/* ==============footer=============== */
+footer{
+    background-color: #fffeed;
 }
